@@ -31,4 +31,5 @@ ul{
 
 ul li{
     flex: 2;
+    margin-bottom: 0.5em;
 }
