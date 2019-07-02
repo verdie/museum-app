@@ -14,7 +14,7 @@ body{
 
 h2{
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     padding-top: 0.5em;
 }
 
@@ -25,6 +25,7 @@ h3{
 h4{
     font-size: 1.3em;
     text-align: center;
+    margin: 0;
 }
 
 p{
@@ -40,8 +41,74 @@ ul{
     padding: 0;
 }
 
-ul li{
+.main-image-wrapper{
     flex: 2;
     margin-bottom: 0.5em;
     text-align: center;
+}
+
+.detail-image{
+    width: 70%;
+}
+
+#comments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment {
+    margin: 1.5em 0 ;
+    padding: 1% 8%;
+    border: 2px solid black;
+    border-radius: 0.3em;
+}
+
+span {
+    display: block;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 1em;
+    font-weight: bold;
+}
+
+.form-element{
+    width: 80%;
+    margin: 0.7em 6% 2%;
+}
+
+.button{
+    margin: 1em 0;
+    width: 60%;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bolder;
+    font-size: 0.8em;
+    padding: 0.8em 0;
+
+}
+
+.form-input{
+    font-size: 1em;
+}
+
+.form-textarea{
+    height: 5em;
+    font-size: 1em;
+}
+
+@media all and (min-width: 720px) { 
+	form{
+        width: 50%;
+    }
+    .detail-image{
+        width: 50%;
+    }
 }

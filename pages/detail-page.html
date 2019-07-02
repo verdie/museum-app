@@ -2,16 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>detail page</title>
         <link rel="stylesheet" type="text/css" href="../styles.css" >
     </head>
     <body>
         <main class="conteiner">
-            <h2>Museum app</h2>
+            <span>Museum app</span>
             <h2>Een vrolijke vioolspeler, Gerard van Honthorst, 1623</h2>
             <section id='comments'>
                 <h3>Comments</h3>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR22RDaqhViB6LvRlwQmqmOud59KyAAkZB0QkYl5FGtOrUk8QPs2A" alt="">
+                <img class="detail-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR22RDaqhViB6LvRlwQmqmOud59KyAAkZB0QkYl5FGtOrUk8QPs2A" alt="">
                 <section class='comment'>
                     <h4>Arien said:</h4>
                     <p>"This is definitely one of my favorites!"</p>
@@ -21,14 +22,14 @@
             <form onsubmit="submitComment(); return false">
                 <div class="formSection">
                     <label for="name">Name:</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" class="form-element form-input"> 
                 </div>
                 <div class="formSection">
                     <label for="msg">Message:</label>
-                    <textarea id="msg"></textarea>
+                    <textarea id="msg" class="form-element form-textarea"></textarea>
                 </div>
-                <div class="button">
-                    <button type="default">Post your comment</button>
+                <div >
+                    <button type="default" class="button">Post your comment</button>
                 </div>
             </form>
         </main>
