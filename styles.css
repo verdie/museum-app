@@ -1,21 +1,30 @@
 body{
     background-color: bisque;
+    width: 100%;
+    margin: 0;
 }
 
 .conteiner{
-    width: 1000px;
+    width: 94%;
     background-color: #fffbe8;
     margin: 0 auto;
-    padding: 0.5em;
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 0.3em;
 }
 
 h2{
     text-align: center;
     font-size: 3em;
+    padding-top: 0.5em;
 }
 
 h3{
     font-size: 1.5em;
+}
+
+h4{
+    font-size: 1.3em;
+    text-align: center;
 }
 
 p{
@@ -28,9 +37,11 @@ ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding: 0;
 }
 
 ul li{
     flex: 2;
     margin-bottom: 0.5em;
+    text-align: center;
 }

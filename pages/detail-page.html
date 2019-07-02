@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>detail page</title>
+        <link rel="stylesheet" type="text/css" href="../styles.css" >
+    </head>
+    <body>
+        <main class="conteiner">
+            <h2>Museum app</h2>
+            <h2>Een vrolijke vioolspeler, Gerard van Honthorst, 1623</h2>
+            <section id='comments'>
+                <h3>Comments</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR22RDaqhViB6LvRlwQmqmOud59KyAAkZB0QkYl5FGtOrUk8QPs2A" alt="">
+                <section class='comment'>
+                    <h4>Arien said:</h4>
+                    <p>"This is definitely one of my favorites!"</p>
+                </section>
+            </section>
+                
+            <form onsubmit="submitComment(); return false">
+                <div class="formSection">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="formSection">
+                    <label for="msg">Message:</label>
+                    <textarea id="msg"></textarea>
+                </div>
+                <div class="button">
+                    <button type="default">Post your comment</button>
+                </div>
+            </form>
+        </main>
+        <script src="detail-page.js"></script>
+    </body>
+</html>
