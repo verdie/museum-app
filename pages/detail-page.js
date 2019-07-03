@@ -15,4 +15,31 @@ function submitComment() {
     commentSection.appendChild(comment)
     inputField.value = null
     textArea.value = null
+    if(doesNotPassAllValidations(name, msg)){
+        return false
+    }
+    var str = "Visit W3Schools! fuckers";
+    var n = str.search("fuck");
+    if (n !== -1) {
+    alert('no fuck you');
 }
+}
+
+function doesNotPassAllValidations(name, msg) {
+    if (!name || !msg) {
+        alert('You forgot to fill in your name or message!')
+        return true;
+    }
+  
+    if(msg.length > 280) {
+        alert('Your comment is too long')
+        return true
+    }
+
+    if(msg.search("fuck") !== -1) {
+        alert('no fuck you');
+        return true
+    }
+  
+    return false
+  }
