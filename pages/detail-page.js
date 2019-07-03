@@ -6,6 +6,9 @@ function submitComment() {
     const comment = document.createElement('section')
     const h4 = document.createElement('h4')
     const p = document.createElement('p')
+    if(doesNotPassAllValidations(name, msg)){
+        return false
+    }
     h4.innerHTML = `${name} said:`
     p.innerHTML = msg
     comment.classList.add('comment')
@@ -15,14 +18,12 @@ function submitComment() {
     commentSection.appendChild(comment)
     inputField.value = null
     textArea.value = null
-    if(doesNotPassAllValidations(name, msg)){
-        return false
+    var string = `${name}`
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    var str = "Visit W3Schools! fuckers";
-    var n = str.search("fuck");
-    if (n !== -1) {
-    alert('no fuck you');
-}
+
+    capitalizeFirstLetter(string);
 }
 
 function doesNotPassAllValidations(name, msg) {
@@ -42,4 +43,6 @@ function doesNotPassAllValidations(name, msg) {
     }
   
     return false
-  }
+}
+
+
