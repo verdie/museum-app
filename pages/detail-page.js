@@ -9,7 +9,7 @@ function submitComment() {
     if(doesNotPassAllValidations(name, msg)){
         return false
     }
-    h4.innerHTML = `${name} said:`
+    h4.innerHTML = `${capitalizeFirstLetter(name)} said:`
     p.innerHTML = msg
     comment.classList.add('comment')
     comment.appendChild(h4)
@@ -18,12 +18,9 @@ function submitComment() {
     commentSection.appendChild(comment)
     inputField.value = null
     textArea.value = null
-    var string = `${name}`
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-
-    capitalizeFirstLetter(string);
 }
 
 function doesNotPassAllValidations(name, msg) {
