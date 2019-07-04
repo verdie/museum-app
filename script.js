@@ -346,14 +346,16 @@ const data = {
     //     const currentPainting = paintings[index]
     //     displayPainting(currentPainting);
     // }
-        function myFunction(str) {
-           var patt1 = /[0-9]{4}/g;
+    function myFunction(str) {
+        let patt1 = /[0-9]{4}/g;
+        let match = str.match(patt1);
             if (match)
                return parseInt(match[0]);
            else
                return null;
            
-       }
+    }
+
     data.artObjects.forEach(function (object) {
         if (object.webImage.width < 500 || object.principalOrFirstMaker === "Gerard van Honthorst" ||  myFunction(object.longTitle) > 1800) {
             console.log('filtered out object:', object);
