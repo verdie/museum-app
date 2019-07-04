@@ -116,3 +116,9 @@ form{
         width: 50%;
     }
 }
+
+
+.myclass{
+    margin: 1em 1.5em;
+    display: block;
+}

@@ -332,14 +332,14 @@ const data = {
         const a = document.createElement('a');
         image.src = painting.webImage.url;
         image.alt = painting.title;
+        image.classList.add("myclass");
         a.href = link;
-        // document.body.appendChild(image);
-        // a.appendChild(image);
         const cont = document.querySelector('.content');
         
         cont.appendChild(image);
         cont.appendChild(a);
         a.appendChild(image);
+        
       }
 
     // for (index = 0; index < paintings.length; ++index) {
