@@ -342,25 +342,23 @@ const data = {
         a.appendChild(image);
       }
 
-    for (index = 0; index < paintings.length; ++index) {
-        const currentPainting = paintings[index]
-        displayPainting(currentPainting);
-    }
-    const val = data.longTitle;
+    // for (index = 0; index < paintings.length; ++index) {
+    //     const currentPainting = paintings[index]
+    //     displayPainting(currentPainting);
+    // }
         function myFunction(str) {
            var patt1 = /[0-9]{4}/g;
-           
-          if ( str.match(patt1) )
-               return ( str.match(patt1) );
-          else
-               return val;
+            if (match)
+               return parseInt(match[0]);
+           else
+               return null;
            
        }
-    console.log(myFunction(val))
-
-
-  data.artObjects.forEach(function (object) {
-    if (object.webImage.width < 500 && object.principalOrFirstMaker ==="Gerard van Honthorst" &&  val > 1800) {
-        return null
-    }
-});
+    data.artObjects.forEach(function (object) {
+        if (object.webImage.width < 500 || object.principalOrFirstMaker === "Gerard van Honthorst" ||  myFunction(object.longTitle) > 1800) {
+            console.log('filtered out object:', object);
+            return null
+        }else{
+            displayPainting(object);
+        }
+    });
