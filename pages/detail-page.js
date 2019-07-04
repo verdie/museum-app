@@ -7,7 +7,7 @@ function submitComment() {
     const h4 = document.createElement('h4')
     const p = document.createElement('p')
     if(doesNotPassAllValidations(name, msg)){
-        return false
+        return
     }
     h4.innerHTML = `${capitalizeFirstLetter(name)} said:`
     p.innerHTML = msg
@@ -34,7 +34,7 @@ function doesNotPassAllValidations(name, msg) {
         return true
     }
 
-    if(msg.search("fuck") !== -1) {
+    if(msg.indexOf("fuck") !== -1) {
         alert('no fuck you');
         return true
     }
@@ -42,4 +42,8 @@ function doesNotPassAllValidations(name, msg) {
     return false
 }
 
-
+//   data.artObjects.forEach(function (object) {
+//       if (object.webImage.width >= 500) {
+//           console.log(object.title);
+//       }
+//   });
