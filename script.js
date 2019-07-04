@@ -324,17 +324,33 @@ const data = {
     ]
   }
 
-let paintings = data.artObjects.values;
+    let paintings = data.artObjects;
 
-for (index = 0; index < paintings.length; ++index) {
-    var image = document.createElement("img");
-    image.src = paintings[index].webImage.url;
-    image.title = paintings[index].title;
-    document.body.appendChild(image);
-    console.log(paintings[index].webImage.url);
+    function displayPainting(painting) {
+        const image = document.createElement("img");
+        const link = "./pages/detail-page.html";
+        const a = document.createElement('a');
+        image.src = painting.webImage.url;
+        image.alt = painting.title;
+        a.href = link;
+        // document.body.appendChild(image);
+        // a.appendChild(image);
+        const cont = document.querySelector('.content');
+        
+        cont.appendChild(image);
+        cont.appendChild(a);
+        a.appendChild(image);
+      }
 
+    for (index = 0; index < paintings.length; ++index) {
+        const currentPainting = paintings[index]
+        displayPainting(currentPainting);
+        console.log(currentPainting);
 
-}
+    }
+
+    
+
 
 //   data.artObjects.forEach(function (object) {
 //     if (object.webImage.width >= 500) {
