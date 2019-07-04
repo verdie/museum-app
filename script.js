@@ -345,15 +345,22 @@ const data = {
     for (index = 0; index < paintings.length; ++index) {
         const currentPainting = paintings[index]
         displayPainting(currentPainting);
-        console.log(currentPainting);
-
     }
+    const val = data.longTitle;
+        function myFunction(str) {
+           var patt1 = /[0-9]{4}/g;
+           
+          if ( str.match(patt1) )
+               return ( str.match(patt1) );
+          else
+               return val;
+           
+       }
+    console.log(myFunction(val))
 
-    
 
-
-//   data.artObjects.forEach(function (object) {
-//     if (object.webImage.width >= 500) {
-//         console.log(object.title);
-//     }
-// });
+  data.artObjects.forEach(function (object) {
+    if (object.webImage.width < 500 && object.principalOrFirstMaker ==="Gerard van Honthorst" &&  val > 1800) {
+        return null
+    }
+});
